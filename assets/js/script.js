@@ -210,38 +210,24 @@ var swiper = new Swiper(".product__swiper--column4", {
 });
 
 // product sidebar clumn4 activation
-var swiper = new Swiper(".product__sidebar--column4", {
-  slidesPerView: 4,
-  loop: true,
-  clickable: true,
-  spaceBetween: 30,
-  breakpoints: {
-    1366: {
-      slidesPerView: 4,
-    },
-    1200: {
-      slidesPerView: 3,
-    },
-    992: {
-      slidesPerView: 2,
-    },
-    768: {
-      slidesPerView: 3,
-      spaceBetween: 30,
-    },
-    480: {
-      slidesPerView: 2,
-      spaceBetween: 20,
-    },
-    0: {
-      slidesPerView: 1,
-    },
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
+document.addEventListener("DOMContentLoaded", function() {
+  var columns = document.querySelectorAll(".shop__collection--column");
+  var currentIndex = 0;
+  var interval = 5000; // Change every 5 seconds
+
+  function showNextColumn() {
+    columns[currentIndex].classList.remove("active");
+    currentIndex = (currentIndex + 1) % columns.length;
+    columns[currentIndex].classList.add("active");
+  }
+
+  // Initialize first column
+  columns[currentIndex].classList.add("active");
+
+  // Set interval for rotating columns
+  setInterval(showNextColumn, interval);
 });
+
 
 // testimonial swiper activation
 var swiper = new Swiper(".testimonial__swiper--activation", {
