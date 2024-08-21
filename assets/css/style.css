@@ -46,26 +46,23 @@
     35. Other section css
 
 */
-/*
-    1. Base CSS
-*/
 :root {
-  --primary-color: #3C3836;
-  --secondary-color: #C97F5F;
-  --hover-color: #ED1D24;
-  --yellow-color: #FF9800;
-  --foreground-color: #000000;
-  --foreground-sub-color: #98928E;
-  --body-text-color: #000000;
-  --text-white-color: #fff;
-  --body-background-color: #fff;
-  --bg-offwhite-color: #F5F7FF;
-  --bg-gray-color: #F5F8FF;
-  --bg-black-color: #000000;
-  --bg-light-dark-color: #1a1818;
-  --border-color: #EDEDED;
-  --frank-ruhl-fonts: 'Frank Ruhl Libre', serif;
-  --karma-fonts: 'Karma', serif;
+  --primary-color: #2F4F4F;
+  --secondary-color: #B8C7B9; /* Muted Sage Green */
+  --hover-color: #9C89B8; /* Deep Lavender */
+  --yellow-color: #FF9800; /* This remains unchanged unless you want to modify it */
+  --foreground-color: #4B4B4B; /* Charcoal Gray */
+  --foreground-sub-color: #98928E; /* Adjust if needed */
+  --body-text-color: #4B4B4B; /* Charcoal Gray */
+  --text-white-color: #FAF9F6; /* Off-White */
+  --body-background-color: #F0E1D0; /* Warm Sand */
+  --bg-offwhite-color: #FAF9F6; /* Off-White */
+  --bg-gray-color: #DADADA; /* Light Gray */
+  --bg-black-color: #000000; /* This remains unchanged */
+  --bg-light-dark-color: #1a1818; /* This remains unchanged */
+  --border-color: #F0E1D0; /* Warm Sand */
+  --frank-ruhl-fonts: 'Frank Ruhl Libre', serif; /* Adjust if you have specific font preferences */
+  --karma-fonts: 'Karma', serif; /* Adjust if you have specific font preferences */
   --body-font-size: 1.5rem;
   --body-font-weight: 400;
   --body-line-height: 2.6rem;
@@ -73,6 +70,7 @@
   --transition: all 0.3s ease 0s;
   --container-fluid-offset: 12rem;
 }
+
 
 /* Common Style */
 *,
