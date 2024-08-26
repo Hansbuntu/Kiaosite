@@ -113,6 +113,7 @@ if (headerStickyTarget) {
   });
 }
 
+
 // Scroll up activation
 const scrollTop = document.getElementById("scroll__top");
 if (scrollTop) {
