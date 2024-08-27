@@ -3487,32 +3487,55 @@ input[type=number]::-webkit-outer-spin-button {
 /* 
     6. Collection css
 */
-.shop__collection--rotator {
-  position: relative;
-  overflow: hidden;
-  height: 350px; /* Adjust height as needed */
-}
-.shop__collection--img {
-  width: 295px;
-  height: 286px;
-  object-fit: cover;
-}
-
 .shop__collection--column {
-  position: absolute;
+    flex: 1 1 100%; 
+    max-width: 100%;
+    padding: 0; 
+}
+
+.shop__collection--card {
+    width: 100%; 
+    display: flex;
+    justify-content: center;
+}
+
+.shop__collection--img {
   width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: auto;
+  display: none; /* Hide all images initially */
 }
 
-.shop__collection--column.active {
-  opacity: 1;
+.shop__collection--img:first-child {
+  display: block; /* Show the first image */
 }
 
+
+.container {
+    max-width: 100%; 
+    padding: 0; 
+}
+
+.shop__collection--rotator {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    margin: 0; 
+}
+
+@media (max-width: 768px) {
+    .shop__collection--column {
+        flex: 1 1 100%;
+    }
+
+    .shop__collection--card {
+        width: 100%;
+    }
+
+    .shop__collection--img {
+        width: 100%;
+        height: auto;
+    }
+}
 
 /* 
     5. Product card css 

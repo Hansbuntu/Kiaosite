@@ -142,6 +142,34 @@ var swiper = new Swiper(".hero__slider--activation", {
   },
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+  const images = document.querySelectorAll('.shop__collection--img');
+  let currentImageIndex = 0;
+  const interval = 6000; // 6 seconds
+
+  function changeImage() {
+      // Hide the current image
+      images[currentImageIndex].style.display = 'none';
+      
+      // Move to the next image
+      currentImageIndex = (currentImageIndex + 1) % images.length;
+
+      // Show the next image
+      images[currentImageIndex].style.display = 'block';
+  }
+
+  // Initialize all images to be hidden except the first one
+  images.forEach((img, index) => {
+      if (index !== 0) {
+          img.style.display = 'none';
+      }
+  });
+
+  // Start the interval to change images
+  setInterval(changeImage, interval);
+});
+
+
 // collection swiper column5 activation
 var swiper = new Swiper(".shop__collection--column5", {
   slidesPerView: 5,
