@@ -3600,7 +3600,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .product__card {
-  border-radius: 5px;
+  border-radius: 25px;
   -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
           box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
   background: var(--body-background-color);
