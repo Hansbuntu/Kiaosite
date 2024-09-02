@@ -3023,7 +3023,6 @@ input[type=number]::-webkit-outer-spin-button {
     3. Slider css 
 */
 .hero__slider--items {
-  background: url(../img/slider/home1-slider1-bg.webp);
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
@@ -3484,24 +3483,37 @@ input[type=number]::-webkit-outer-spin-button {
   }
 }
 
-/* 
-    6. Collection css
-*/
-.shop__collection--column {
-    flex: 1 1 100%; 
-    max-width: 100%;
-    padding: 0; 
+/* General Styles */
+.shop__collection--section {
+  padding: 60px 0; /* Adjust padding as needed */
 }
 
-.shop__collection--card {
-    width: 100%; 
-    display: flex;
-    justify-content: center;
+.shop__collection--rotator {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;     /* Center vertically if needed */
+  overflow: hidden;        /* Hide overflow to show one image at a time */
+  position: relative;      /* Needed for absolute positioning of images */
+  height: 550px;           /* Default height */
+  max-width: 100%;         /* Ensure it doesn’t overflow the container */
+}
+
+.shop__collection--column {
+  flex: 0 0 auto; /* Prevent columns from growing or shrinking */
+  position: absolute; /* Positioning all images on top of each other */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex; /* Align items */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
 }
 
 .shop__collection--img {
-  width: 100%;
-  height: auto;
+  width: 100%;  /* Make image fit the width of its container */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Cover the container while maintaining aspect ratio */
   display: none; /* Hide all images initially */
 }
 
@@ -3509,33 +3521,29 @@ input[type=number]::-webkit-outer-spin-button {
   display: block; /* Show the first image */
 }
 
-
-.container {
-    max-width: 100%; 
-    padding: 0; 
-}
-
-.shop__collection--rotator {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0;
-    margin: 0; 
-}
-
+/* Responsive adjustments */
 @media (max-width: 768px) {
-    .shop__collection--column {
-        flex: 1 1 100%;
-    }
+  .shop__collection--rotator {
+      height: 550px; /* Adjust height for smaller screens */
+  }
 
-    .shop__collection--card {
-        width: 100%;
-    }
-
-    .shop__collection--img {
-        width: 100%;
-        height: auto;
-    }
+  .shop__collection--img {
+      width: 100%; /* Fit the container width */
+      height: auto; /* Maintain aspect ratio */
+  }
 }
+
+@media (max-width: 480px) {
+  .shop__collection--rotator {
+      height: 550px; /* Further adjust height for very small screens */
+  }
+
+  .shop__collection--img {
+      width: 100%; /* Fit the container width */
+      height: auto; /* Maintain aspect ratio */
+  }
+}
+
 
 /* 
     5. Product card css 
@@ -6734,7 +6742,6 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .footer__bg {
-  background: url(../img/banner/banner-fullwidth4.webp);
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
